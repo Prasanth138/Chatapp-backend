@@ -16,9 +16,9 @@ const app = express();
 app.use(express.json()); //to accept JSON Data
 app.use(cors({origin: '*'}));
 
-// app.get("/", (req, res) => {
-//     res.send("API is running..");
-//   });
+app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
